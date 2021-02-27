@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  ui:
+    image: 'sarychev90/employeemanager:front.ui'
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 9999:4200

@@ -1,0 +1,20 @@
+<BaseContainer>
+<UnitWrapper @unit="Departments">
+{{#if @model}}
+{{#each @model as |department|}}
+   <div>
+    <LinkTo @route="department" @model="{{department.id}}" class="linkunit department">
+        {{department.name}}
+    </LinkTo>
+   </div>
+{{/each}}
+{{else}}
+    <div>
+        No departments data avaliable in DB!
+   </div>
+{{/if}}
+</UnitWrapper>
+<LinkTo @route="departmentdata" class="link create">
+        Create new department
+</LinkTo>
+</BaseContainer>

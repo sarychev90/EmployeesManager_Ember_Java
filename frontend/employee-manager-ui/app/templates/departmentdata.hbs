@@ -1,0 +1,33 @@
+<BaseContainer>
+<UnitWrapper @unit="Work with departments data">
+<article class="unit">
+  <div class="details">
+      <div class="detail">
+        <span>Name:</span>
+        <input value={{this.model.name}} onchange={{action (mut this.model.name) value=
+         "target.value"}} type="text" placeholder="Name">
+      </div>
+      {{#if this.model.id}}
+      <div class="center">
+            <button type="button" {{on "click" (fn this.cancelUpdate
+                this.model.id
+                )}}
+                class="cancel w150">Cancel</button>
+            <button type="button" {{on "click" (fn this.updateDepartmentData
+                this.model.id
+                this.model.name
+                )}}
+                class="update w150">Update</button>
+      </div>
+      {{else}}
+      <div class="center">
+            <button type="button" {{on "click" (fn this.createDepartment
+                this.model.name)}}
+                class="save w150">Create</button>
+            <button type="button" {{on "click" this.cancelCreate}} class="cancel w150">Cancel</button>
+      </div>
+      {{/if}}
+  </div>
+</article>
+</UnitWrapper>
+</BaseContainer>

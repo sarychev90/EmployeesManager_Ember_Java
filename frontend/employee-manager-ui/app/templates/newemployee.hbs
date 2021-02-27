@@ -1,0 +1,67 @@
+<BaseContainer>
+<UnitWrapper @unit="Create new employee">
+<div class="unit">
+  <div class="image">
+    <img src={{this.model.photo}} alt="Employee"><br>
+    <input type="file" {{on "change" this.uploadPhoto}}>
+  </div>
+  <div class="details">
+      <div class="detail">
+        <span>First name:</span>
+        <input value={{this.model.firstName}} onchange={{action (mut this.model.firstName) value=
+         "target.value"}} type="text" placeholder="First name">
+      </div>
+      <div class="detail">
+        <span>Last name:</span>
+        <input value={{this.model.lastName}} onchange={{action (mut this.model.lastName) value=
+         "target.value"}} type="text" placeholder="Last name">
+      </div>
+      <div class="detail">
+        <span>Patronymic name:</span>
+        <input value={{this.model.patronymicName}} onchange={{action (mut this.model.patronymicName) 
+        value="target.value"}} type="text" placeholder="Patronymic name">
+      </div>
+      <div class="detail">
+        <span>Position:</span>
+        <input value={{this.model.position}} onchange={{action (mut this.model.position) 
+        value="target.value"}} type="text" placeholder="Position"> 
+      </div>
+      <div class="detail">
+        <span>Phone number:</span>
+        <input value={{this.model.phoneNumber}} onchange={{action (mut this.model.phoneNumber) 
+        value="target.value"}} type="text" placeholder="Phone number"> 
+      </div>
+      <div class="detail">
+        <span>Email address:</span> 
+        <input value={{this.model.emailAddress}} onchange={{action (mut this.model.emailAddress) 
+        value="target.value"}} type="text" placeholder="Email address"> 
+      </div>
+      <div class="detail">
+        <span>Age:</span> 
+        <input value={{this.model.age}} onchange={{action (mut this.model.age) 
+        value="target.value"}} type="text" placeholder="Age">
+      </div>
+      <div class="detail">
+        <span>Salary:</span> 
+        <input value={{this.model.salary}} onchange={{action (mut this.model.salary) 
+        value="target.value"}} type="text" placeholder="Age"> UAH/month
+      </div>
+      <div class="center">
+         <button type="button" {{on "click" (fn this.createEmployee 
+            this.model.firstName
+            this.model.lastName
+            this.model.patronymicName
+            this.model.position
+            this.model.phoneNumber
+            this.model.emailAddress
+            this.model.age
+            this.model.salary
+            this.model.photo
+            this.model.departmentId)}}
+            class="save w150">Create</button>
+          <button type="button" {{on "click" (fn this.cancelCreateEmployee this.model.departmentId)}} class="cancel w150">Cancel</button>
+      </div>
+  </div>
+</div>
+</UnitWrapper>
+</BaseContainer>

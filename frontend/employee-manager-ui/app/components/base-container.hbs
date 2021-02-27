@@ -1,0 +1,8 @@
+{{page-title "Employee manager UI"}}
+<LinkTo @route="departments" class="route">All departments ></LinkTo>
+{{#if this.getDepartmentId}} 
+<LinkTo @route="department" @model="{{this.getDepartmentId}}" class="route">{{this.getDepartmentName}} ></LinkTo>
+{{/if}}
+<main class="container mt-5">
+    {{yield}}
+</main>

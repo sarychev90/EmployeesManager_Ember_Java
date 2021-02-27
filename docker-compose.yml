@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  ui:
+    image: 'sarychev90/employeemanager:front.ui'
+    build: ./frontend/employee-manager-ui
+    build:
+       context: ./frontend/employee-manager-ui 
+       dockerfile: Dockerfile
+    command: ember serve --proxy http://app:8080
+    ports:
+      - 9999:4200
+    container_name: ui
+    depends_on:
+      - app
+# for external host app no proxy      
+#    environment:
+#      - APP_API_URL=app
+  app:
+    image: 'sarychev90/employeemanager:back.app'
+    build: ./backend/EmployeesManagerApp
+    build: 
+       context: ./backend/EmployeesManagerApp
+       dockerfile: Dockerfile
+    container_name: app
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/employeemanager
+      - SPRING_DATASOURCE_USERNAME=employeemanager
+      - SPRING_DATASOURCE_PASSWORD=employeemanager
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+          
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: db
+    environment:
+      - POSTGRES_USER=employeemanager
+      - POSTGRES_PASSWORD=employeemanager
+      

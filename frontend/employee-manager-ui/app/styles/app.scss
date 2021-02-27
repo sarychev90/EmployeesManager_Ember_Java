@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button {
+  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body{
+    background-color:beige;
+}
+
+.wrapper {
+  border-radius: 5px;
+  border: 3px;
+  border-color: gray;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-style: dotted;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  color:grey
+}
+
+.route {
+  padding: 10px 30px 10px;
+  text-decoration: none;
+  color: #fff;
+  background: green;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.9;
+  display: inline-block;
+  margin-top:5px;
+  margin-left:5px;
+}
+
+.link {
+  padding: 10px 30px 10px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.9;
+  display: inline-block;
+  margin-top:5px;
+  width: 220px;
+}
+
+.linkunit {
+  padding: 5px 5px 5px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  border: 3px;
+  border-color: gray;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.9;
+  display: inline-block;
+  width: 250px;
+  margin-top:5px;
+  border-style: dotted;
+}
+
+.department {
+  background: rgb(250, 138, 138);
+}
+
+.employee {
+  background: rgb(149, 149, 255);
+}
+
+button {
+  padding: 10px 30px 10px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+.cancel, .delete{
+  background: brown;
+}
+
+.save, .create, .update, .linkcreate, .nodelete{
+  background: rgb(64, 64, 218);
+}
+
+.linkdelete {
+  margin-top:5px;
+  width: 220px;
+  text-align: left;
+}
+
+.w150{
+  width: 150px;
+}
+
+.center{
+  text-align: center;
+  margin-top: 10px;
+  width: 100;
+}
+
+.unit {
+    margin-top: 15px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unit img {
+    border-radius: 5px;
+}
+  
+.unit .image {
+    flex-grow: 0;
+    flex-basis: 150px;
+    margin: 20px 25px;
+    text-align: center;
+}
+
+.unit .image img {
+    height: 250px;
+}
+
+.unit .details {
+    flex-basis: 50%;
+    flex-grow: 2;
+    display: flex;
+    height: 250px;
+    margin: 20px 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+  
+.unit .detail {
+    flex-basis: 100%;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.unit .detail span {
+    font-weight: 400;
+    font-style: normal;
+    float: left;
+    width: 130px;
+  }
+
+.unit .detail input {
+    background-color:beige;
+    width: 250px;
+}
+
+.ember-modal-dialog {
+    width: 280px;
+    height: 140px;
+}
