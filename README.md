@@ -1,5 +1,7 @@
 The "Employees Manager" project offers the user a simple functionality for managing the filling of the company with the structure of departments and employees with basic necessary information. In the project, the base CRUD functionality is available using REST services.
 
+A Swagger-based OpenAPI interface is available in the project. After deploying the project, the user can get acquainted in detail with the structure of the REST services methods at the link: http://localhost:8080/swagger-ui.html#/employees-manager-data-controller
+
 This project implements the concept of a client-server application with support for a micro-service architecture based on the Docker infrastructure.
 
 There are just few simple steps to build and run the application locally:
