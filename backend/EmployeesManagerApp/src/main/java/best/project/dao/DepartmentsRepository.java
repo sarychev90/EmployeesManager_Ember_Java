@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import best.project.models.Department;
 
-public interface DepartmentsRepository extends JpaRepository<Department, Integer> {
+public interface DepartmentsRepository extends JpaRepository<Department, Long> {
 
 	/**
 	 * Find all Department by name
@@ -23,5 +23,5 @@ public interface DepartmentsRepository extends JpaRepository<Department, Integer
 	 * @param id - id of the employee
 	 * @return - department with a given Employee id in the search 
 	 */
-	Department findByEmployeeId(int id);
+	Department findByEmployeeId(Long id);
 }

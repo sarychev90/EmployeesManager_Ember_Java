@@ -26,7 +26,7 @@ public class Department implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(notes = "The database generated department's ID")
-	private int id;
+	private Long id;
 
 	@Column(name = "name")
 	@ApiModelProperty(notes = "Name of the department", required = true)

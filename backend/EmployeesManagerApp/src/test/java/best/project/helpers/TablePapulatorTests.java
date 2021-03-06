@@ -27,7 +27,7 @@ public class TablePapulatorTests {
 	@Test
 	void testLoadInitialDataToDB() {
 		List<Department> departments = departmentsRepository.findAll();
-		LOGGER.log(Level.INFO, "Found departments: " + departments.toString());
+		LOGGER.log(Level.INFO, "Found departments: " + departments.size());
 		assertFalse(departments.isEmpty());
 	}
 }

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import best.project.models.Employee;
 
-public interface EmployeesRepository extends JpaRepository<Employee, Integer> {
+public interface EmployeesRepository extends JpaRepository<Employee, Long> {
 
 	/**
 	 * Find all Employee by last name

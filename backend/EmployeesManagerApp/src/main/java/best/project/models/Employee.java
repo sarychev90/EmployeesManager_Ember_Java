@@ -29,7 +29,7 @@ public class Employee implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(notes = "The database generated employee's ID")
-	private int id;
+	private Long id;
 
 	@Column(name = "first_name")
 	@ApiModelProperty(notes = "First name of the employee", required = true)

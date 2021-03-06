@@ -1,13 +1,9 @@
 package best.project.helpers;
 
-import java.io.File;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import org.apache.commons.io.FileUtils;
 
 public class ImageVSBase64Convertor {
 	
