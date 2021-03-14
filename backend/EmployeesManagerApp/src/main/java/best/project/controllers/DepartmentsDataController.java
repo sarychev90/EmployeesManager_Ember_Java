@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import best.project.helpers.DtoWrapper;
 import best.project.models.Department;
 import best.project.services.DepartmentsService;
 import io.swagger.annotations.ApiOperation;
@@ -53,8 +54,8 @@ public class DepartmentsDataController {
 		} catch (Exception e) {
 			LOGGER.log(Level.SEVERE, "Еxecution of the method getDepartment" + DB_DATA_PROCESSING_ERROR + e.getMessage()+ e);
 		}
-		return department != null ? new ResponseEntity<>(department, HttpStatus.OK)
-				: new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		return department != null ? new ResponseEntity<>(DtoWrapper.prepareDepartmentDto(department), 
+				HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
 	/**
@@ -107,7 +108,7 @@ public class DepartmentsDataController {
 	public ResponseEntity<?> updateDepartment(@RequestBody Department department) {
 		ResponseEntity<?> responseEntity = new ResponseEntity<>(HttpStatus.OK);
 		try {
-			departmentsService.save(department);
+			departmentsService.update(department);
 		} catch (Exception e) {
 			LOGGER.log(Level.SEVERE, "Еxecution of the method updateDepartment" + DB_DATA_PROCESSING_ERROR + e.getMessage()+ e);
 			responseEntity = new ResponseEntity<>(HttpStatus.NOT_MODIFIED);

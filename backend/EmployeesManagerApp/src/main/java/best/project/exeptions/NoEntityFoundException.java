@@ -1,8 +1,8 @@
 package best.project.exeptions;
 
-public class NoEntityFoundExeption extends Exception {
+public class NoEntityFoundException extends Exception {
 	private static final long serialVersionUID = -796065227538587089L;
-	public NoEntityFoundExeption(String message) {
+	public NoEntityFoundException(String message) {
         super(message);
     }
 }

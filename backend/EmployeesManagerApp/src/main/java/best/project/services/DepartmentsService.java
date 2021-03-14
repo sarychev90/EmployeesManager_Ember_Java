@@ -2,7 +2,7 @@ package best.project.services;
 
 import java.util.List;
 
-import best.project.exeptions.NoEntityFoundExeption;
+import best.project.exeptions.NoEntityFoundException;
 import best.project.models.Department;
 
 
@@ -16,26 +16,26 @@ public interface DepartmentsService {
 	 * 
 	 * @param id - id of the department
 	 * @return - department with a given id in the search
-	 * @throws NoEntityFoundExeption if no department found by id 
+	 * @throws NoEntityFoundException if no department found by id 
 	 */
-	Department findById(Long id) throws NoEntityFoundExeption;
+	Department findById(Long id) throws NoEntityFoundException;
 
 	/**
 	 * Find department by employee id
 	 * 
 	 * @param id - id of the employee
 	 * @return - department with a given employee id in the search
-	 * @throws NoEntityFoundExeption if no department found by employee id 
+	 * @throws NoEntityFoundException if no department found by employee id 
 	 */
-	Department findByEmployeeId(Long id) throws NoEntityFoundExeption;
+	Department findByEmployeeId(Long id) throws NoEntityFoundException;
 	
 	/**
 	 * Find all departments in DB
 	 * 
 	 * @return - all available departments in DB
-	 * @throws NoEntityFoundExeption if no departments found in DB 
+	 * @throws NoEntityFoundException if no departments found in DB 
 	 */
-	List<Department> findAll() throws NoEntityFoundExeption;
+	List<Department> findAll() throws NoEntityFoundException;
 	
 	/**
 	 * Update department data by id
@@ -43,7 +43,7 @@ public interface DepartmentsService {
 	 * @param department - new department data for update
 	 * @return - updated department
 	 */
-	Department update(Department department);
+	Department update(Department department) throws NoEntityFoundException;
 	
 	/**
 	 * Create new department in DB
@@ -57,7 +57,7 @@ public interface DepartmentsService {
 	 * Delete department data by id
 	 * 
 	 * @param id - id of the department prepared for delete operation
-	 * @throws NoEntityFoundExeption if no department found by id 
+	 * @throws NoEntityFoundException if no department found by id 
 	 */
-	void delete(Long id) throws NoEntityFoundExeption;
+	void delete(Long id) throws NoEntityFoundException;
 }

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import best.project.helpers.DtoWrapper;
 import best.project.models.Employee;
 import best.project.services.EmployeesService;
 import io.swagger.annotations.ApiOperation;
@@ -53,8 +54,8 @@ public class EmployeesDataController {
 		} catch (Exception e) {
 			LOGGER.log(Level.SEVERE, "Еxecution of the method getEmployee" + DB_DATA_PROCESSING_ERROR + e.getMessage() + e);
 		}
-		return employee != null ? new ResponseEntity<>(employee, HttpStatus.OK)
-				: new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		return employee != null ? new ResponseEntity<>(DtoWrapper.prepareEmployeeDto(employee), 
+				HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
 	/**
