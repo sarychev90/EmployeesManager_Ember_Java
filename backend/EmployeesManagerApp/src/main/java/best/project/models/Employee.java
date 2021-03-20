@@ -57,7 +57,7 @@ public class Employee implements Serializable{
 
 	@Column(name = "age")
 	@ApiModelProperty(notes = "Age of the employee")
-	private int age;
+	private Integer age;
 
 	@Column(name = "salary")
 	@ApiModelProperty(notes = "Salary of the employee", required = true)

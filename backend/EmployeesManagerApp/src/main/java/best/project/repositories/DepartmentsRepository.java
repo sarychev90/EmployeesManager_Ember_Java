@@ -1,4 +1,4 @@
-package best.project.dao;
+package best.project.repositories;
 
 import java.util.List;
 

@@ -21,11 +21,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import best.project.dao.DepartmentsRepository;
-import best.project.dao.EmployeesRepository;
 import best.project.exeptions.NoEntityFoundException;
 import best.project.models.Department;
 import best.project.models.Employee;
+import best.project.repositories.DepartmentsRepository;
+import best.project.repositories.EmployeesRepository;
 import best.project.services.impl.EmployeesServiceImpl;
 
 @ExtendWith(MockitoExtension.class)

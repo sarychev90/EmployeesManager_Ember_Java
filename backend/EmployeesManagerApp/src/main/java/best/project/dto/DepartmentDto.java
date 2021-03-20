@@ -2,7 +2,6 @@ package best.project.dto;
 
 import java.util.List;
 
-import best.project.models.Employee;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,5 +16,5 @@ public class DepartmentDto {
 
 	private String name;
 	
-    private List<Employee> employee;
+    private List<EmployeeDto> employee;
 }

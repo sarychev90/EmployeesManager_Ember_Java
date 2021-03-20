@@ -21,9 +21,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import best.project.dao.DepartmentsRepository;
 import best.project.exeptions.NoEntityFoundException;
 import best.project.models.Department;
+import best.project.repositories.DepartmentsRepository;
 import best.project.services.impl.DepartmentsServiceImpl;
 
 @ExtendWith(MockitoExtension.class)

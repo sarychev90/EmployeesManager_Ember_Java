@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import best.project.dao.DepartmentsRepository;
-import best.project.dao.EmployeesRepository;
 import best.project.models.Department;
 import best.project.models.Employee;
+import best.project.repositories.DepartmentsRepository;
+import best.project.repositories.EmployeesRepository;
 
 public class TablesPopulator {
 

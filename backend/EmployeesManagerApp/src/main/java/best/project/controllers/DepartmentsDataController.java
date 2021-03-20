@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import best.project.helpers.DtoWrapper;
+import best.project.mappers.DepartmentMapper;
 import best.project.models.Department;
 import best.project.services.DepartmentsService;
 import io.swagger.annotations.ApiOperation;
@@ -54,7 +55,7 @@ public class DepartmentsDataController {
 		} catch (Exception e) {
 			LOGGER.log(Level.SEVERE, "Еxecution of the method getDepartment" + DB_DATA_PROCESSING_ERROR + e.getMessage()+ e);
 		}
-		return department != null ? new ResponseEntity<>(DtoWrapper.prepareDepartmentDto(department), 
+		return department != null ? new ResponseEntity<>(DepartmentMapper.INSTANCE.departmentToDepartmentDto(department), 
 				HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 

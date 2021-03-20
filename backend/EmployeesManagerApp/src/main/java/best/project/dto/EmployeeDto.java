@@ -26,7 +26,7 @@ public class EmployeeDto {
 
 	private String emailAddress;
 
-	private int age;
+	private Integer age;
 
 	private BigDecimal salary;
 	

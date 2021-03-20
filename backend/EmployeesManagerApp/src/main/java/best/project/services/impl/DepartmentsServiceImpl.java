@@ -7,9 +7,9 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import best.project.dao.DepartmentsRepository;
 import best.project.exeptions.NoEntityFoundException;
 import best.project.models.Department;
+import best.project.repositories.DepartmentsRepository;
 import best.project.services.DepartmentsService;
 
 /**

@@ -5,9 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import best.project.dao.DepartmentsRepository;
-import best.project.dao.EmployeesRepository;
 import best.project.helpers.TablesPopulator;
+import best.project.repositories.DepartmentsRepository;
+import best.project.repositories.EmployeesRepository;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
