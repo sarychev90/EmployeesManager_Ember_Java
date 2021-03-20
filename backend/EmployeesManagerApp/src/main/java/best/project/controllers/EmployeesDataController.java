@@ -1,7 +1,6 @@
 package best.project.controllers;
 
 import java.util.List;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,9 +16,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import best.project.dto.DepartmentDto;
-import best.project.helpers.DtoWrapper;
-import best.project.mappers.DepartmentMapper;
 import best.project.mappers.EmployeeMapper;
 import best.project.models.Employee;
 import best.project.services.EmployeesService;

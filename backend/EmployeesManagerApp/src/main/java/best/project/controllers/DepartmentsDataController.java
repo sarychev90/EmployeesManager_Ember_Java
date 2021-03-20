@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import best.project.helpers.DtoWrapper;
 import best.project.mappers.DepartmentMapper;
 import best.project.models.Department;
 import best.project.services.DepartmentsService;
